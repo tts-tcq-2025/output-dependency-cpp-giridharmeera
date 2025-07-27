@@ -34,7 +34,7 @@ std::string formatColorMapLine(const ColorPair& entry) {
 
 int printColorMap() 
 {
-    std::vector<ColorPair> colorMap = generateColorMap();  
+    auto colorMap = generateColorMap();  
     for (ColorPair &entry : colorMap) 
     {
         std::cout << formatColorMapLine(entry) << "\n";
