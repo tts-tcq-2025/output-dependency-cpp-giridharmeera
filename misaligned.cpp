@@ -1,4 +1,6 @@
 #include <iostream>
+#include <vector>
+#include <string>
 #include <assert.h>
 
 
@@ -8,6 +10,8 @@ struct ColorPair {
     std::string minor;
 };
 
+std::vector<ColorPair> generateColorMap();
+std::string formatColorMapLine(const ColorPair& entry);
 
 std::vector<ColorPair> generateColorMap() {
     const char* majorColor[] = {"White", "Red", "Black", "Yellow", "Violet"};
