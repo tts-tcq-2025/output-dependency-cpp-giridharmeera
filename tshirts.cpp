@@ -13,8 +13,6 @@ char size(int cms) {
     return sizeName;
 }
 
-
-#ifdef UNIT_TEST
 void testTshirtSize() {
     std::cout << "\nTshirt size test\n";
     assert(size(37) == 'S');
@@ -26,4 +24,4 @@ void testTshirtSize() {
 
     std::cout << "All is well (maybe!)\n";
 }
-#endif
+
