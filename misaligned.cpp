@@ -4,7 +4,6 @@
 #include <sstream>
 #include <assert.h>
 
-
 struct ColorPair {
     int index;
     std::string major;
@@ -41,7 +40,6 @@ int printColorMap()
     }
     return colorMap.size();
 }
-
 
 void testPrintColorMap() 
 {
