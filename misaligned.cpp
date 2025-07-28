@@ -42,7 +42,7 @@ int printColorMap()
     return colorMap.size();
 }
 
-#ifdef UNIT_TEST
+
 void testPrintColorMap() 
 {
     std::cout << "\nPrint color map test\n";
@@ -63,4 +63,4 @@ void testPrintColorMap()
 
     std::cout << "All is well (maybe!)\n";
 }
-#endif
+
