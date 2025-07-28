@@ -1,5 +1,5 @@
 #include "gtest/gtest.h"
-#define UNIT_TEST
+
 void testTshirtSize();
 void testPrintColorMap();
 void testWeatherReport();
