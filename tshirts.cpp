@@ -13,6 +13,7 @@ char size(int cms) {
     return sizeName;
 }
 
+
 #ifdef UNIT_TEST
 void testTshirtSize() {
     std::cout << "\nTshirt size test\n";
