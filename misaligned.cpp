@@ -31,13 +31,15 @@ std::string formatColorMapLine(const ColorPair& entry) {
     oss << entry.index << " | " << entry.major << " | " << entry.minor;
     return oss.str();
 }
-
-int printColorMap() 
+void printOnConsole(std::string& lineContent){
+  std::cout<<lineContent;
+}
+int printColorMap(std::function<void(std::string&) printFn)
 {
     auto colorMap = generateColorMap();  
     for (ColorPair &entry : colorMap) 
     {
-        std::cout << formatColorMapLine(entry) << "\n";
+        printFn(formatColorMapLine(entry) << "\n");
     }
     return colorMap.size();
 }
