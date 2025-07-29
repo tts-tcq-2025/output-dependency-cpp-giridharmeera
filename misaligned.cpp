@@ -3,6 +3,7 @@
 #include <string>
 #include <sstream>
 #include <assert.h>
+#include "misaligned.h"
 
 struct ColorPair {
     int index;
@@ -41,24 +42,5 @@ int printColorMap()
     return colorMap.size();
 }
 
-void testPrintColorMap() 
-{
-    std::cout << "\nPrint color map test\n";
-    auto colorMap = generateColorMap();
 
-    // Count test
-    assert(colorMap.size() == 25);
-
-    // Test for BUG in minor color (should fail)
-    assert(colorMap[1].minor == "Orange");
-
-    // Test for alignment (line for index 0 vs 10)
-    std::string line0 = formatColorMapLine(colorMap[0]);
-    std::string line10 = formatColorMapLine(colorMap[10]);
-
-    // This should fail because alignment is inconsistent (different column spacing)
-    assert(line0.size() == line10.size());
-
-    std::cout << "All is well (maybe!)\n";
-}
 
